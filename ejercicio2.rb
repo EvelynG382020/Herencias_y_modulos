@@ -47,6 +47,10 @@ class Ave < Animal
     include Habilidades::Volador
     include Habilidades::Caminante
     include Alimentacion::Herbivoro
+
+    def mi_nombre
+        "Soy #{self.nombre} y me gusta andar en el aire.."
+    end
 end
 
 class Mamifero < Animal
@@ -114,7 +118,8 @@ pajaro = Ave.new('Luna')
 perro = Perro.new('Cachupin')
 abeja = Abeja.new('zz')
 
-puts "Hola soy un pajaro y...#{pajaro.aterrizar}"
+puts pajaro.mi_nombre, "#{pajaro.aterrizar}"
+#puts "Hola soy un pajaro y...#{pajaro.aterrizar}"
 puts "Soy Cachupin... #{perro.comer}"
 puts "Soy una linda Abeja...#{abeja.volar}"
 
